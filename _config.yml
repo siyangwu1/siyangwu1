@@ -25,7 +25,7 @@ author:
   # Biographic information
   avatar           : "profile.jpg"
   name             : "Siyang Wu"
-  pronouns         : # example: "she/her"  
+  pronouns         : "HEe/Him"
   bio              : "Hello, I study agent"
   location         : "Hyde Park, IL"
   employer         : "University of Chicago"
@@ -107,7 +107,7 @@ comments:
     colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
+  #branch                 : "gh-pages" # "master", "gh-pages"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
   format                 : "yml"
