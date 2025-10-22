@@ -10,4 +10,4 @@ redirect_from:
 
 You can **view** or **download** my full CV below.
 
-[📄 Download Siyang Wu CV (PDF)](/files/SiyangWu-CV.pdf){:target="_blank"}
+[Download Siyang Wu CV (PDF)](/files/Siyang Wu-CV.pdf){:target="_blank"}
