@@ -1,14 +1,14 @@
 ---
-title: "Paper Title Number 3"
+title: "How Do Language Models Generate Slang: A Systematic Comparison between Human and Machine-Generated Slang Usages"
 collection: publications
 category: manuscripts
-permalink: /publication/2015-10-01-paper-title-number-3
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
-date: 2015-10-01
-venue: 'Journal 1'
-slidesurl: 'https://academicpages.github.io/files/slides3.pdf'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
+permalink: /publication/2025-09-18-language-models-generate-slang
+excerpt: "We present the first systematic framework comparing human and model-generated slang to measure creativity, coherence, and informativeness in informal language generation."
+date: 2025-09-18
+venue: "EMNLP 2025 Findings (to appear)"
+paperurl: "https://arxiv.org/abs/2509.15518"
+citation: 'Siyang Wu and Zhewei Sun. (2025). <i>How Do Language Models Generate Slang: A Systematic Comparison between Human and Machine-Generated Slang Usages.</i> EMNLP 2025 Findings (to appear). arXiv:2509.15518.'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+This study introduces the **first comprehensive framework** for evaluating LLMs’ ability to generate and reuse slang.  
+We quantify **linguistic creativity** through morphological complexity, semantic novelty, and coherence—bridging computational sociolinguistics and model evaluation to reveal how LLMs internalize informal and cultural language.
