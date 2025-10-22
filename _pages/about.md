@@ -11,7 +11,8 @@ Hello everyone, and welcome to my personal bio!
 I completed my undergraduate studies at the **University of Michigan**, where I earned my **B.S. in Data Science** (Go Blue!).  
 Currently, I am pursuing a **Master of Science in Data Science** at the **University of Chicago**, under the **Data Science Institute (DSI)**.  
 
-During my time here, I have had the opportunity to work with incredible faculty and collaborators, including **Prof. James Evans** head of the Knowledge Lab, **Prof. Zhewei Sun** in the Speech and Language Group at the **Toyota Technological Institute at Chicago (TTIC)**, **Prof. Ari Holtzman** head of Conceptualization Lab, and **Prof. Bryon Aragam** at the Booth School of Business.  
+During my time here, I have had the opportunity to work with incredible faculty and collaborators, including [**Prof. James Evans**](https://sociology.uchicago.edu/directory/James-A-Evans) at the [Knowledge Lab](https://knowledgelab.org/), [**Prof. Zhewei Sun**](https://zhewei-sun.github.io/) in the [Speech and Language Group](https://slattic.ttic.edu/) at the [Toyota Technological Institute at Chicago (TTIC)](https://www.ttic.edu/), [**Prof. Ari Holtzman**](https://ariholtzman.com/) at the [Conceptualization Lab](https://conceptualization.ai/), and [**Prof. Bryon Aragam**](https://bryonaragam.com/) at the [Booth School of Business](https://www.chicagobooth.edu/).
+ 
 
 ### Research Interests
 
