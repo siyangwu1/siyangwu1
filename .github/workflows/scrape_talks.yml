@@ -11,26 +11,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # allows committing back to repo
+
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'  # Specify the Python version you need
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
 
-    - name: Install dependencies
-      run: |
-        pip install jupyter pandas requests beautifulsoup4 geopy  # Add other dependencies as needed
-        pip install getorg --upgrade
+      - name: Install dependencies
+        run: |
+          pip install jupyter pandas requests beautifulsoup4 geopy getorg --upgrade
 
-    - name: Run Jupyter Notebook
-      run: |
-        jupyter nbconvert --to notebook --execute talkmap.ipynb --output talkmap_out.ipynb
+      - name: Run Jupyter Notebook and export to HTML
+        run: |
+          jupyter nbconvert --to html --execute talkmap.ipynb --output talkmap.html
 
-    - name: Commit changes
-      run: |
-        git config user.name "siyangwu1"
-        git add .
-        git commit -m "Automated update of talk locations" || echo "No changes to commit"
-        git push
+      - name: Commit and push HTML result
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add talkmap.html
+          git commit -m "Automated update of talk locations" || echo "No changes to commit"
+          git push origin HEAD:${{ github.ref }}
