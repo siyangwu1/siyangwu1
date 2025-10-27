@@ -25,7 +25,7 @@ author_profile: true
       {% endunless %}
 
       <article class="publication-entry">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <h3>{{ post.title }}</h3>
         <p><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
 
         {% if post.abstract %}
@@ -33,7 +33,7 @@ author_profile: true
           {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
           <p class="publication-abstract">
             {{ short_abs }}...
-            <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+            <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
           </p>
         {% endif %}
       </article>
@@ -43,7 +43,7 @@ author_profile: true
 {% else %}
   {% for post in site.publications reversed %}
     <article class="publication-entry">
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <h3>{{ post.title }}</h3>
       <p><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
 
       {% if post.abstract %}
@@ -51,10 +51,9 @@ author_profile: true
         {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
         <p class="publication-abstract">
           {{ short_abs }}...
-          <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
         </p>
       {% endif %}
     </article>
   {% endfor %}
 {% endif %}
-
