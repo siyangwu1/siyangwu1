@@ -1,7 +1,7 @@
 ---
 title: "Automatically Advancing LLM Expertise in Technology Judgment"
 collection: publications
-category: conference
+category: conferences
 permalink: /publication/2025-05-20-advancing-llm-expertise
 excerpt: "We introduce a large-scale benchmark evaluating how language models discern subtle conceptual distinctions between semantically similar inventions, revealing mechanisms of knowledge use and self-questioning in LLMs."
 date: 2025-05-20

@@ -1,7 +1,7 @@
 ---
 title: "Language Models Surface the Unwritten Code of Science and Society"
 collection: publications
-category: conference
+category: conferences
 permalink: /publication/2025-05-25-unwritten-code-of-science-and-society
 excerpt: "We use LLMs as diagnostic instruments to uncover the implicit norms and evaluative heuristics—the 'unwritten code'—that shape human decision-making in science and society."
 date: 2025-05-25

@@ -1,7 +1,7 @@
 ---
 title: "Mapping Overlaps in Benchmarks through Perplexity in the Wild"
 collection: publications
-category: conference
+category: conferences
 permalink: /publication/2025-09-28-mapping-overlaps-in-benchmarks
 excerpt: "We connect benchmark semantics, performance, and token-level perplexity signatures to uncover hidden overlaps and define new evaluation axes for LLM benchmarking."
 date: 2025-09-28

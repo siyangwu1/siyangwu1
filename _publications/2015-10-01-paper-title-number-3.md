@@ -1,7 +1,7 @@
 ---
 title: "How Do Language Models Generate Slang: A Systematic Comparison between Human and Machine-Generated Slang Usages"
 collection: publications
-category: conference
+category: conferences
 permalink: /publication/2025-09-18-language-models-generate-slang
 excerpt: "We present the first systematic framework comparing human and model-generated slang to measure creativity, coherence, and informativeness in informal language generation."
 date: 2025-09-18
