@@ -13,7 +13,6 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Render grouped by category if defined -->
 {% if site.publication_category %}
   {% for category in site.publication_category %}
     {% assign title_shown = false %}
@@ -27,31 +26,31 @@ author_profile: true
       {% endunless %}
 
       <article class="publication-entry">
-        <div class="publication-wrapper">
-          <!-- Image (left side) -->
+        <div class="pub-row">
           {% if post.image %}
-            <div class="publication-image">
-              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+            <div class="pub-thumb">
+              <a href="{{ post.url | relative_url }}">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+              </a>
             </div>
           {% endif %}
 
-          <!-- Text content (right side) -->
-          <div class="publication-text">
-            <h3>{{ post.title }}</h3>
+          <div class="pub-body">
+            <h3 class="pub-title">{{ post.title }}</h3>
 
             {% if post.author %}
               {% assign authors = post.author | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
-              <p class="publication-authors">{{ authors }}</p>
+              <p class="pub-authors">{{ authors }}</p>
             {% endif %}
 
             {% if post.venue %}
-              <p><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+              <p class="pub-venue"><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
             {% endif %}
 
             {% if post.abstract %}
-              {% assign max_words = 100 %}
+              {% assign max_words = 60 %}
               {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
-              <p class="publication-abstract">
+              <p class="pub-abstract">
                 {{ short_abs }}...
                 <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
               </p>
@@ -65,29 +64,31 @@ author_profile: true
 {% else %}
   {% for post in site.publications reversed %}
     <article class="publication-entry">
-      <div class="publication-wrapper">
+      <div class="pub-row">
         {% if post.image %}
-          <div class="publication-image">
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          <div class="pub-thumb">
+            <a href="{{ post.url | relative_url }}">
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+            </a>
           </div>
         {% endif %}
 
-        <div class="publication-text">
-          <h3>{{ post.title }}</h3>
+        <div class="pub-body">
+          <h3 class="pub-title">{{ post.title }}</h3>
 
           {% if post.author %}
             {% assign authors = post.author | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
-            <p class="publication-authors">{{ authors }}</p>
+            <p class="pub-authors">{{ authors }}</p>
           {% endif %}
 
           {% if post.venue %}
-            <p><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+            <p class="pub-venue"><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
           {% endif %}
 
           {% if post.abstract %}
-            {% assign max_words = 100 %}
+            {% assign max_words = 60 %}
             {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
-            <p class="publication-abstract">
+            <p class="pub-abstract">
               {{ short_abs }}...
               <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
             </p>
