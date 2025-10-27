@@ -10,7 +10,7 @@ venue: "arXiv preprint"
 paperurl: "https://arxiv.org/abs/2509.23488v1"
 citation: 'Siyang Wu*, H. Bao*, S. Li*, Ari Holtzman, and James A. Evans. (2025). <i>Mapping Overlaps in Benchmarks through Perplexity in the Wild.</i> arXiv:2509.23488v1.'
 author: "Siyang Wu*, H. Bao*, S. Li*, Ari Holtzman, and James A. Evans"
-image: /images/signature_overview.PNG
+image: /images/signature_overview.png
 ---
 
 
