@@ -27,43 +27,37 @@ author_profile: true
       {% endunless %}
 
       <article class="publication-entry">
-        <!-- Title -->
-        <h3>{{ post.title }}</h3>
-
-        <!-- Author list -->
-        {% if post.authors %}
-          {% assign authors = post.authors %}
-          {% if authors contains 'Siyang Wu' %}
-            {% assign authors = authors | join: ', ' | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
-          {% else %}
-            {% assign authors = authors | join: ', ' %}
+        <div class="publication-wrapper">
+          <!-- Image (left side) -->
+          {% if post.image %}
+            <div class="publication-image">
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+            </div>
           {% endif %}
-          <p class="publication-authors">{{ authors }}</p>
 
-        {% elsif post.author %}
-          {% assign authors = post.author | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
-          <p class="publication-authors">{{ authors }}</p>
+          <!-- Text content (right side) -->
+          <div class="publication-text">
+            <h3>{{ post.title }}</h3>
 
-        {% elsif post.citation %}
-          {% assign authors = post.citation | remove: '<i>' | remove: '</i>' | split: '.' | first %}
-          {% assign authors = authors | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
-          <p class="publication-authors">{{ authors }}</p>
-        {% endif %}
+            {% if post.author %}
+              {% assign authors = post.author | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
+              <p class="publication-authors">{{ authors }}</p>
+            {% endif %}
 
-        <!-- Venue + Year -->
-        {% if post.venue %}
-          <p><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
-        {% endif %}
+            {% if post.venue %}
+              <p><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+            {% endif %}
 
-        <!-- Short abstract -->
-        {% if post.abstract %}
-          {% assign max_words = 100 %}
-          {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
-          <p class="publication-abstract">
-            {{ short_abs }}...
-            <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
-          </p>
-        {% endif %}
+            {% if post.abstract %}
+              {% assign max_words = 100 %}
+              {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
+              <p class="publication-abstract">
+                {{ short_abs }}...
+                <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
+              </p>
+            {% endif %}
+          </div>
+        </div>
       </article>
 
     {% endfor %}
@@ -71,39 +65,35 @@ author_profile: true
 {% else %}
   {% for post in site.publications reversed %}
     <article class="publication-entry">
-      <h3>{{ post.title }}</h3>
-
-      {% if post.authors %}
-        {% assign authors = post.authors %}
-        {% if authors contains 'Siyang Wu' %}
-          {% assign authors = authors | join: ', ' | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
-        {% else %}
-          {% assign authors = authors | join: ', ' %}
+      <div class="publication-wrapper">
+        {% if post.image %}
+          <div class="publication-image">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          </div>
         {% endif %}
-        <p class="publication-authors">{{ authors }}</p>
 
-      {% elsif post.author %}
-        {% assign authors = post.author | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
-        <p class="publication-authors">{{ authors }}</p>
+        <div class="publication-text">
+          <h3>{{ post.title }}</h3>
 
-      {% elsif post.citation %}
-        {% assign authors = post.citation | remove: '<i>' | remove: '</i>' | split: '.' | first %}
-        {% assign authors = authors | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
-        <p class="publication-authors">{{ authors }}</p>
-      {% endif %}
+          {% if post.author %}
+            {% assign authors = post.author | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
+            <p class="publication-authors">{{ authors }}</p>
+          {% endif %}
 
-      {% if post.venue %}
-        <p><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
-      {% endif %}
+          {% if post.venue %}
+            <p><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+          {% endif %}
 
-      {% if post.abstract %}
-        {% assign max_words = 100 %}
-        {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
-        <p class="publication-abstract">
-          {{ short_abs }}...
-          <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
-        </p>
-      {% endif %}
+          {% if post.abstract %}
+            {% assign max_words = 100 %}
+            {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
+            <p class="publication-abstract">
+              {{ short_abs }}...
+              <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
+            </p>
+          {% endif %}
+        </div>
+      </div>
     </article>
   {% endfor %}
 {% endif %}
