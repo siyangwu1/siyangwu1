@@ -9,5 +9,6 @@ date: 2025-09-18
 venue: "EMNLP 2025 Findings (to appear)"
 paperurl: "https://arxiv.org/abs/2509.15518"
 citation: 'Siyang Wu and Zhewei Sun. (2025). <i>How Do Language Models Generate Slang: A Systematic Comparison between Human and Machine-Generated Slang Usages.</i> EMNLP 2025 Findings (to appear). arXiv:2509.15518.'
+author: "Siyang Wu and Zhewei Sun"
 ---
 

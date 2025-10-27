@@ -9,6 +9,7 @@ date: 2025-05-20
 venue: "arXiv preprint"
 paperurl: "https://arxiv.org/abs/2505.12452"
 citation: 'Siyang Wu, H. Bao, N. Kunievsky, and James A. Evans. (2025). <i>Automatically Advancing LLM Expertise in Technology Judgment.</i> arXiv:2505.12452.'
+author: "Siyang Wu, H. Bao, N. Kunievsky, and James A. Evans"
 ---
 
 

@@ -13,7 +13,7 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<!-- Render grouped by category if defined -->
 {% if site.publication_category %}
   {% for category in site.publication_category %}
     {% assign title_shown = false %}
@@ -31,14 +31,29 @@ author_profile: true
         <h3>{{ post.title }}</h3>
 
         <!-- Author list -->
-        {% if post.citation %}
-          {% assign authors = post.citation | remove: '<i>' | remove: '</i>' %}
-          {% assign authors = authors | split: '.' | first %}
+        {% if post.authors %}
+          {% assign authors = post.authors %}
+          {% if authors contains 'Siyang Wu' %}
+            {% assign authors = authors | join: ', ' | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
+          {% else %}
+            {% assign authors = authors | join: ', ' %}
+          {% endif %}
+          <p class="publication-authors">{{ authors }}</p>
+
+        {% elsif post.author %}
+          {% assign authors = post.author | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
+          <p class="publication-authors">{{ authors }}</p>
+
+        {% elsif post.citation %}
+          {% assign authors = post.citation | remove: '<i>' | remove: '</i>' | split: '.' | first %}
+          {% assign authors = authors | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
           <p class="publication-authors">{{ authors }}</p>
         {% endif %}
 
         <!-- Venue + Year -->
-        <p><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
+        {% if post.venue %}
+          <p><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+        {% endif %}
 
         <!-- Short abstract -->
         {% if post.abstract %}
@@ -58,13 +73,28 @@ author_profile: true
     <article class="publication-entry">
       <h3>{{ post.title }}</h3>
 
-      {% if post.citation %}
-        {% assign authors = post.citation | remove: '<i>' | remove: '</i>' %}
-        {% assign authors = authors | split: '.' | first %}
+      {% if post.authors %}
+        {% assign authors = post.authors %}
+        {% if authors contains 'Siyang Wu' %}
+          {% assign authors = authors | join: ', ' | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
+        {% else %}
+          {% assign authors = authors | join: ', ' %}
+        {% endif %}
+        <p class="publication-authors">{{ authors }}</p>
+
+      {% elsif post.author %}
+        {% assign authors = post.author | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
+        <p class="publication-authors">{{ authors }}</p>
+
+      {% elsif post.citation %}
+        {% assign authors = post.citation | remove: '<i>' | remove: '</i>' | split: '.' | first %}
+        {% assign authors = authors | replace: 'Siyang Wu', '<strong>Siyang Wu</strong>' %}
         <p class="publication-authors">{{ authors }}</p>
       {% endif %}
 
-      <p><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
+      {% if post.venue %}
+        <p><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+      {% endif %}
 
       {% if post.abstract %}
         {% assign max_words = 100 %}

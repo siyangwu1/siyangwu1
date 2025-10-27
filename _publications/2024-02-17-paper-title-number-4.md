@@ -9,4 +9,5 @@ date: 2025-05-25
 venue: "arXiv preprint"
 paperurl: "https://arxiv.org/abs/2505.18942"
 citation: 'H. Bao, Siyang Wu, J. Choi, Y. Mao, and James A. Evans. (2025). <i>Language Models Surface the Unwritten Code of Science and Society.</i> arXiv:2505.18942.'
+author: "H. Bao, Siyang Wu, J. Choi, Y. Mao, and James A. Evans"
 ---
