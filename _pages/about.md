@@ -29,5 +29,5 @@ My broader goal is to advance **AI for Science (AI4Sci)** by building interpreta
 
 ### Open to Collaborations
 
-I am always open to collaborations! If you have an interesting or early-stage idea—even a naïve one—let’s discuss it and see how we can turn it into something impactful together.
+I am always open to collaborations! If you have an interesting or early-stage， let’s discuss it and see how we can turn it into something impactful together.
 
