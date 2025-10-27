@@ -27,8 +27,14 @@ author_profile: true
       <article class="publication-entry">
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
-        {% if post.excerpt %}
-          <p>{{ post.excerpt | markdownify }} <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a></p>
+
+        {% if post.abstract %}
+          {% assign max_words = 100 %}
+          {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
+          <p class="publication-abstract">
+            {{ short_abs }}...
+            <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+          </p>
         {% endif %}
       </article>
 
@@ -39,8 +45,14 @@ author_profile: true
     <article class="publication-entry">
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <p><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
-      {% if post.excerpt %}
-        <p>{{ post.excerpt | markdownify }} <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a></p>
+
+      {% if post.abstract %}
+        {% assign max_words = 100 %}
+        {% assign short_abs = post.abstract | markdownify | strip_html | truncatewords: max_words %}
+        <p class="publication-abstract">
+          {{ short_abs }}...
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+        </p>
       {% endif %}
     </article>
   {% endfor %}
