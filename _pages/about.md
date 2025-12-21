@@ -18,17 +18,11 @@ During my time here, I have had the opportunity to work with incredible faculty 
 
 My research focuses on understanding, designing, and deploying AI systems that support social goods and align with human values and capabilities. Where Wtih in I foucs on the following three asepcts:
 
-**Cultural Co-Evolution of Machines and Humans**
+**Cultural Co-Evolution of Machines and Humans**: I investigate how LLMs absorb and reproduce the latent structures of human imagination, scientific judgment, and cultural evolution.
 
-I investigate how LLMs absorb and reproduce the latent structures of human imagination, scientific judgment, and cultural evolution.
+**Automation of Scientific Discovery**: I design agentic frameworks and human-in-the-loop systems that enable LLMs to act as proactive "co-theorists" in scientific reasoning and hypothesis generation.
 
-**Automation of Scientific Discovery**
-
-I design agentic frameworks and human-in-the-loop systems that enable LLMs to act as proactive "co-theorists" in scientific reasoning and hypothesis generation.
-
-**Rethinking LLM Benchmarking Paradigms**
-
-I develop principled methods to evaluate model capabilities and credibility beyond traditional benchmarks, probing the internal exposure landscape and reliability of LLMs.
+**Rethinking LLM Benchmarking Paradigms**: I develop principled methods to evaluate model capabilities and credibility beyond traditional benchmarks, probing the internal exposure landscape and reliability of LLMs.
 
 
 ### Open to Collaborations
