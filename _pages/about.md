@@ -16,9 +16,17 @@ During my time here, I have had the opportunity to work with incredible faculty 
 
 ### Research Interests
 
-I am interested in how we can build language systems that do more than map inputs to outputs, systems that actively participate in knowledge, reasoning, and interpretation. I view modern LLMs not just as predictors, but as emerging computational agents embedded in human information and social environments. My work explores how models can internalize structure, interrogate uncertainty, reflect on their own inferences, and surface latent patterns in human judgment and communication. Ultimately, I aim to design AI agentic language systems that are epistemically grounded and behaviorally aligned, systems that support scientific discovery, enhance human reasoning, advance agentic automation and expand our collective ability to generate and understand complex ideas.
+My research focuses on understanding, designing, and deploying AI systems that support social goods and align with human values and capabilities. Where Wtih in I foucs on the following three asepcts:
+
+**Cultural Co-Evolution of Machines and Humans**
+I investigate how LLMs absorb and reproduce the latent structures of human imagination, scientific judgment, and cultural evolution.
+**Automation of Scientific Discovery**
+I design agentic frameworks and human-in-the-loop systems that enable LLMs to act as proactive "co-theorists" in scientific reasoning and hypothesis generation.
+**Rethinking LLM Benchmarking Paradigms**
+I develop principled methods to evaluate model capabilities and credibility beyond traditional benchmarks, probing the internal exposure landscape and reliability of LLMs.
+
 
 ### Open to Collaborations
 
-I am always open to collaborations! If you have an interesting or early-stage， let’s discuss it and see how we can turn it into something impactful together.
+I am always open to collaborations! If you have an interesting or early-stage idea， let’s discuss it and see how we can turn it into something impactful together.
 
